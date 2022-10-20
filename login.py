@@ -46,9 +46,9 @@ def login():
 			s += " WHERE"
 			s += " ("
 			if t:
-				s += " UID='" + id + "'"
-			else:
 				s += " EMAIL='" + id + "'"
+			else:
+				s += " UID='" + id + "'"
 				s += " )"
 			db_cursor.execute(s)
 			res=db_cursor.fetchall()
